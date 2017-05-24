@@ -1,0 +1,11 @@
+# hidden file
+.*
+
+# temporary file
+tmp/
+.bak
+.swap
+
+# spark-shell
+*.log
+metastore_db/
