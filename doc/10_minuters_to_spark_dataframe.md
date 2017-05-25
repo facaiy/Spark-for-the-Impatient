@@ -5,29 +5,28 @@ Inspired by:
 + [10 Minutes to pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html)
 + [hhbyyh/DataFrameCheatSheet](https://github.com/hhbyyh/DataFrameCheatSheet/blob/master/README.md)
 
-Customarily, we import as follows:
+### Requirement
 
-```scala
-import org.apache.spark.ml.linalg.{Vector, Vectors}
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.{DataFrame, Row}
-import org.apache.spark.sql.functions._
-```
+1. Follow the [instructions](http://spark.apache.org/docs/latest/#downloading) to download spark.
 
-### Create SparkSession
+2. To launch spark-shell, uncompress the file downloaded, change directory into it and execute the following command:
 
-```scala
-import org.apache.spark.sql.SparkSession
+  ```bash
+  ./bin/spark-shell
+  ```
 
-val spark = SparkSession
-  .builder()
-  .appName("Spark SQL basic example")
-  .config("spark.some.config.option", "some-value")
-  .getOrCreate()
+  Read the [instruction](http://spark.apache.org/docs/latest/#running-the-examples-and-shell) if you need more help.
 
-// For implicit conversions like converting RDDs to DataFrames
-import spark.implicits._
-```
+3. Copy, paste and run the following code snippets when reading.
+
+4. Customarily, we import as follows:
+
+  ```scala
+  import org.apache.spark.ml.linalg.{Vector, Vectors}
+  import org.apache.spark.rdd.RDD
+  import org.apache.spark.sql.{DataFrame, Row}
+  import org.apache.spark.sql.functions._
+  ```
 
 
 ### Object Creation
