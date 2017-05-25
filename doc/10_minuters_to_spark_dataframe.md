@@ -79,7 +79,6 @@ scala> val values = Seq(Seq(0, "Tom", 67.5, true), Seq(1, "Lily", 45.3, false))
 scala> val rows = values.map{x => Row(x:_*)}
 
 scala> val rdd = spark.sparkContext.makeRDD[Row](rows)
-ParallelCollectionRDD[4] at makeRDD at <console>:36
 
 scala> val schema = StructType(StructField("id", IntegerType, false) :: StructField("name", StringType, false) :: StructField("weight", DoubleType, false) :: StructField("is_male", BooleanType, false) :: Nil)
 
@@ -218,7 +217,7 @@ scala> df.select($"info._2").show
 +---+
 ```
 
-More to see: [Working with Complex Data Formats with Structured Streaming in Apache Spark 2.1](https://getpocket.com/redirect?url=https://databricks.com/blog/2017/02/23/working-complex-data-formats-structured-streaming-apache-spark-2-1.html&formCheck=0c6cdc035692e1e335fd56e58e11987a)
+See more: [Working with Complex Data Formats with Structured Streaming in Apache Spark 2.1](https://getpocket.com/redirect?url=https://databricks.com/blog/2017/02/23/working-complex-data-formats-structured-streaming-apache-spark-2-1.html&formCheck=0c6cdc035692e1e335fd56e58e11987a)
 
 ##### Boolean Indexing
 ```scala
@@ -598,4 +597,4 @@ scala> df.show
 scala> df.write.format("libsvm").save("/user/facai/test/libsvm")
 ```
 
-more to see: [Data Sources](https://spark.apache.org/docs/latest/sql-programming-guide.html#data-sources)
+See more: [Data Sources](https://spark.apache.org/docs/latest/sql-programming-guide.html#data-sources)
